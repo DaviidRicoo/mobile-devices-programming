@@ -1,0 +1,52 @@
+---
+
+### 2. `.gitignore` (Crítico para Android Studio)
+
+Este `.gitignore` evita que se suban gigabytes de archivos de compilación de Gradle o tu configuración privada del IDE:
+
+```gitignore
+# ==========================================
+# Gradle y Archivos de Compilación
+# ==========================================
+.gradle/
+**/build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/androidTest/**/build/
+!**/src/test/**/build/
+
+# ==========================================
+# Configuración Local y Claves (NUNCA SUBIR)
+# ==========================================
+local.properties
+*.keystore
+*.jks
+
+# ==========================================
+# Android Studio / IntelliJ / IDEs
+# ==========================================
+.idea/
+*.iml
+*.iws
+*.ipr
+.navigation/
+captures/
+.externalNativeBuild/
+.cxx/
+
+# ==========================================
+# Binarios y Ejecutables de Android
+# ==========================================
+*.ap_
+*.apk
+*.aab
+*.dex
+*.class
+
+# ==========================================
+# Archivos del Sistema Operativo
+# ==========================================
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
